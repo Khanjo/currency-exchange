@@ -6,7 +6,7 @@
 
 ## Description
 
-_This webpage will take an amount enetered in US dollars and use the Exchange Rate API to give your currency back in various countries._
+_This webpage will take an amount entered in one currency and use ExchangeRate-API to give your currency back in various countries._
 
 ### Specs
 | Spec | Input | Output |
