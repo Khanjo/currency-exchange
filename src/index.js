@@ -1,5 +1,6 @@
 import "./css/styles.css";
-import CurrencyExchange from "./currencyAPI";
+import { CurrencyExchange } from "./currencyAPI";
+import { conversion } from "./currencyAPI";
 
 // Business Logic
 
@@ -14,14 +15,14 @@ async function exchangeRate(currency, code) {
     } else if (!checkArray.includes(code)) {
         output.innerText = "We do not have info on this currency";
     } else {
-        printRate();
+        printRate(currency, response, code);
     }
 }
 
 // UI Logic
 
-function printRate() {
-
+function printRate(currency, response, code) {
+    document.getElementById("output").innerText = `exchanging ${currency} USD would get you ${conversion(currency, response.conversion_rates[code])} ${code}`;
 }
 
 function formSubmit(event) {
