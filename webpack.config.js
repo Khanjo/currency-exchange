@@ -11,7 +11,12 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+            "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+        }
     },
     devtool: 'eval-source-map',
     plugins: [
