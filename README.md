@@ -17,10 +17,11 @@ _This webpage will take an amount enetered in US dollars and use the Exchange Ra
 
 ## Setup/Installation Requirements
 
-* _Visit the following link: https://github.com/Khanjo/currency-exchange_
-* _Clone the repository to your desired directory._
-* _Go to https://www.exchangerate-api.com/ and create a free account to get an API key_
-* _create a .env file in the currency-exchange directory and add API_KEY = {YOUR_API_KEY} to it.
+* Visit the following link: https://github.com/Khanjo/currency-exchange
+* Clone the repository to your desired directory.
+* Go to https://www.exchangerate-api.com/ and create a free account to get an API key
+* Open currency-exchange directory with VS Code or your preferred code editor
+* create a .env file in the root directory and add API_KEY = {YOUR_API_KEY} to it.
 
 ## Known Bugs
 
