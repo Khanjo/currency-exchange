@@ -9,11 +9,11 @@ async function exchangeRate(currency, code) {
     const checkArray = Object.keys(response.conversion_rates);
     const output = document.getElementById("output");
     if (!response) {
-        output.innerText = "There has been an error processing your request";
+        output.innerText = "There has been an error processing your request.";
     } else if (Number.isNaN(currency)) {
-        output.innerText = "Please enter a number";
+        output.innerText = "Please enter a number.";
     } else if (!checkArray.includes(code)) {
-        output.innerText = "We do not have info on this currency";
+        output.innerText = "We do not have info on this currency.";
     } else {
         printRate(currency, response, code);
     }
@@ -22,7 +22,7 @@ async function exchangeRate(currency, code) {
 // UI Logic
 
 function printRate(currency, response, code) {
-    document.getElementById("output").innerText = `exchanging ${currency} USD would get you ${conversion(currency, response.conversion_rates[code])} ${code}`;
+    document.getElementById("output").innerText = `USD ${currency} equals ${code} ${conversion(currency, response.conversion_rates[code])}.`;
 }
 
 function formSubmit(event) {
