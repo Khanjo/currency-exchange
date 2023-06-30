@@ -3,12 +3,18 @@ import CurrencyExchange from "./currencyAPI";
 
 // Business Logic
 
-async function exchangeRate() {
+async function exchangeRate(currency, code) {
     const response = await CurrencyExchange.getExchange();
-    if (response.main) {
-        printRate();
+    const checkArray = Object.keys(response.conversion_rates);
+    const output = document.getElementById("output");
+    if (!response) {
+        output.innerText = "There has been an error processing your request";
+    } else if (Number.isNaN(currency)) {
+        output.innerText = "Please enter a number";
+    } else if (!checkArray.includes(code)) {
+        output.innerText = "We do not have info on this currency";
     } else {
-        printError();
+        printRate();
     }
 }
 
@@ -18,13 +24,11 @@ function printRate() {
 
 }
 
-function printError() {
-
-}
-
 function formSubmit(event) {
     event.preventDefault();
-    exchangeRate();
+    const currency = document.getElementById("USD").value;
+    const code = document.getElementById("code").value;
+    exchangeRate(currency, code);
 }
 
 window.addEventListener("load", function () {
