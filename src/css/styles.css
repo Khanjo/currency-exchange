@@ -25,6 +25,7 @@ p {
 
 input {
     height: 22pt;
+    width: 300px;
     margin: 20px;
     font-size: 14pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
