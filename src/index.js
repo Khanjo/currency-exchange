@@ -29,6 +29,8 @@ function formSubmit(event) {
     event.preventDefault();
     const currency = document.getElementById("USD").value;
     const code = document.getElementById("code").value;
+    document.getElementById("USD").value = null;
+    document.getElementById("code").value = null;
     exchangeRate(currency, code);
 }
 
