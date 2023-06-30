@@ -1,29 +1,45 @@
-# Currency Exchange
+# _Currency Exchanger_
 
-#### (Brief Description of Application)
+#### _A webpage that exchanges currencies_
 
-#### By (Your Name Here)
-
-## Technologies Used
-
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+#### By _**Joshua Khan**_
 
 ## Description
 
+_This webpage will take an amount enetered in US dollars and use the Exchange Rate API to give your currency back in various countries._
+
+### Specs
+| Spec | Input | Output |
+| :----- | :------ | :------ |
+| The program will take user inputted currency amount and user inputted choice of currencies and make an API call to calculate the rate of exchange | 100.00 / USD / EUR | 91.9 (at time of test exchange rate may have changed) |
+| The program will display an error if the API call results in an error | 100.00 USD / EUR / Submit | There has been an error processing your request |
+| The program will display an error if the user chooses a currency that does not exist | 100. USD / GGG / Submit | We do not have info on this currency. | 
+
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _Visit the following link: https://github.com/Khanjo/currency-exchange_
+* _Clone the repository to your desired directory._
+* _Go to https://www.exchangerate-api.com/ and create a free account to get an API key_
+* _create a .env file in the currency-exchange directory and add API_KEY = {YOUR_API_KEY} to it.
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+_No Known Bugs_
 
-## License
+## Support and contact details
+
+https://github.com/Khanjo
+
+## Technologies Used
+
+* HTML
+* CSS
+* Javascript
+* Webpack
+* ExchangeRate-API
+
+### License
+
+[MIT License.](https://opensource.org/license/mit/)
+
+Copyright (c) 2023 **_Joshua Khan_**
