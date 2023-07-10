@@ -9,7 +9,7 @@ async function exchangeRate(currency, code1, code2) {
     const checkArray = Object.keys(response.conversion_rates);
     const output = document.getElementById("output");
     if (!response) {
-        output.innerText = "There has been an error processing your request.";
+        printError(response);
     } else if (Number.isNaN(currency)) {
         output.innerText = 'Please enter a number in "Currency amount".';
     } else if (!checkArray.includes(code1, code2)) {
@@ -23,6 +23,10 @@ async function exchangeRate(currency, code1, code2) {
 
 function printRate(currency, response, code1, code2) {
     document.getElementById("output").innerText = `${code1} ${currency} equals ${code2} ${conversion(currency, response.conversion_rates[code2])}.`;
+}
+
+function printError(error) {
+    document.getElementById("output").innerText = `There was an error processing your request: ${error.errorMessage}`;
 }
 
 function formSubmit(event) {
