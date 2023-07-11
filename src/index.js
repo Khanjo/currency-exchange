@@ -12,8 +12,8 @@ async function exchangeRate(currency, code1, code2) {
         printError(response);
     } else if (Number.isNaN(currency)) {
         output.innerText = 'Please enter a number in "Currency amount".';
-    } else if (!checkArray.includes(code1, code2)) {
-        output.innerText = "We do not have info on this currency.";
+    } else if (!checkArray.includes(code2)) {
+        output.innerText = "We do not have info on the second currency.";
     } else {
         printRate(currency, response, code1, code2);
     }
